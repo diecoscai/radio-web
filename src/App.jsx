@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 // Components
 import Header from "./components/header/Header";
-import Slider from "./components/Slider/Slider";
+import Slider from "./components/slider/Slider";
 import AddBanner from "./components/addBanner/AddBanner";
 import Player from "./components/player/Player";
 import Preloader from "./components/preLoader/Preloader";
