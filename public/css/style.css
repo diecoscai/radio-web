@@ -231,7 +231,7 @@ a:hover {
 /*-- Button css start --*/
 .m24_logo_wrapper{
 	float:left;
-	width:15%;
+	width:12%;
 	padding-top:12px;
 	position:relative;
 }
@@ -466,7 +466,7 @@ a:hover {
 }
 .m24_header_right_Wrapper{
 	float: right;
-    width: 15%;
+    width: 12%;
     padding-top: 16px;
     position: relative;
 }
@@ -1656,6 +1656,21 @@ ul.tranding_more_option li a .opt_icon i:before{
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
+}
+.tranding_title {
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100%;
+	max-width: 200px;
+	padding: 5px;
+	cursor: pointer;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	-o-transition: -o-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	color: #fff;
 }
 .treanding_slider_main_box .tranding_play_icon a i {
     display: inline-block;

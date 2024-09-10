@@ -17,6 +17,7 @@ const Player = () => {
   const [mediaSource, setMediaSource] = useState(null);
   const [volume, setVolume] = useState(1);
 
+  
   //Set media
   useEffect(() => {
     const fetchMedia = async () => {
