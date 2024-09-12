@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
-import getMedia from "../../services/PlayerService";
+import React, { useRef, useState, useEffect, useContext } from "react";
+import RadioContext from "../../context/RadioContext";
 
 // mediaSource structure:
 // {
@@ -11,23 +11,20 @@ import getMedia from "../../services/PlayerService";
 const Player = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState("00:00"); // Actual time
-  // const [duration, setDuration] = useState('00:00');  // Duration time
-  //   const [progress, setProgress] = useState(0);
-  const [mediaSource, setMediaSource] = useState(null);
+  const [currentTime, setCurrentTime] = useState("00:00");
   const [volume, setVolume] = useState(1);
+  const { selectedRadio } = useContext(RadioContext);
 
-  
+
   //Set media
   useEffect(() => {
-    const fetchMedia = async () => {
-      const mediaUrl = await getMedia();
-      if (mediaUrl) {
-        setMediaSource(mediaUrl);
-      }
-    };
-    fetchMedia();
-  }, []);
+    if (selectedRadio) {
+      const audio = audioRef.current;
+      audio.src = selectedRadio.stream;
+      audio.play().catch(error => console.error("Error playing audio:", error));
+      setIsPlaying(true);
+    }
+  }, [selectedRadio]);
 
   // Función para manejar el cambio de volumen
   const handleVolumeChange = (e) => {
@@ -66,10 +63,7 @@ const Player = () => {
   useEffect(() => {
     const audio = audioRef.current;
     const handleTimeUpdate = () => {
-      if (audio.duration) {
-        setCurrentTime(formatTime(audio.currentTime));
-        // setProgress((audio.currentTime / audio.duration) * 100);
-      }
+      setCurrentTime(formatTime(audio.currentTime));
     };
     if (audio) {
       audio.addEventListener("timeupdate", handleTimeUpdate);
@@ -83,10 +77,8 @@ const Player = () => {
     if (audio) {
       if (isPlaying) {
         audio.pause();
-        console.log("Pause");
       } else {
-        audio.play();
-        console.log("Play");
+        audio.play().catch(error => console.error("Error playing audio:", error));
       }
       setIsPlaying(!isPlaying);
     }
@@ -96,9 +88,8 @@ const Player = () => {
     <div className="adonis-player-wrap">
       <div
         id="adonis_jp_container"
-        className={`master-container-holder ${
-          isPlaying ? "jp-state-playing" : ""
-        }`}
+        className={`master-container-holder ${isPlaying ? "jp-state-playing" : ""
+          }`}
         role="application"
         aria-label="media player"
       >
@@ -108,17 +99,17 @@ const Player = () => {
             <div className="row adonis-player">
               <audio
                 ref={audioRef}
-                src={mediaSource}
+                src={selectedRadio ? selectedRadio.stream : ''}
                 preload="metadata"
               ></audio>
               <div className="col-sm-4 col-lg-4 col-xl-3 col-4">
                 <div className="media current-item">
                   <div className="song-poster">
-                    {mediaSource && (
+                    {selectedRadio && (
                       <img
                         className="box-rounded-sm"
-                        src={mediaSource.image}
-                        alt=""
+                        src={selectedRadio.img_url}
+                        alt={selectedRadio.title}
                       />
                     )}
                   </div>
@@ -127,7 +118,7 @@ const Player = () => {
                       {mediaSource && mediaSource.title}
                     </div> */}
                     <div className="jp-title artist-name">
-                      <a href="#">{mediaSource && mediaSource.title}</a>
+                      <a href="#">{selectedRadio ? selectedRadio.title : 'No radio selected'}</a>
                     </div>
                   </div>
                   <div className="des_option_wrapper">

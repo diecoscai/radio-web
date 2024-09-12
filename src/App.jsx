@@ -11,6 +11,7 @@ import RegisterModal from "./components/registerModal/RegisterModal";
 import NotFound from './components/notFound/NotFound';
 
 import Home from "./components/home/Home";
+import { RadioProvider } from './context/RadioProvider';
 
 function App() {
   const radioListRef = useRef(null);
@@ -28,19 +29,21 @@ function App() {
   };
 
   return (
-    <Router>
-      <Preloader />
-      <div className="m24_main_wrapper" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <Routes>
-          <Route path="/404" element={<NotFound />} />
-          <Route path="*" element={<Navigate to="/404" />} />
-          <Route path="/" element={<Home scrollToSection={scrollToSection} sectionRefs={sectionRefs} />} />
-        </Routes>
-      </div>
-      <LenguageModal />
-      <LoginModal />
-      <RegisterModal />
-    </Router>
+    <RadioProvider>
+      <Router>
+        <Preloader />
+        <div className="m24_main_wrapper" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+          <Routes>
+            <Route path="/404" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/404" />} />
+            <Route path="/" element={<Home scrollToSection={scrollToSection} sectionRefs={sectionRefs} />} />
+          </Routes>
+        </div>
+        <LenguageModal />
+        <LoginModal />
+        <RegisterModal />
+      </Router>
+    </RadioProvider>
   );
 }
 
