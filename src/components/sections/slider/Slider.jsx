@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import TrendingItem from "./TrendingItem";
-import radiosData from "./raddios.json"
+import { getTrendingRadios } from "../../../services/RadioServices";
 
 const Slider = () => {
+  const [radios, setRadios] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    getTrendingRadios()
+      .then(data => {
+        setRadios(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <div>Cargando...</div>;
+  if (error) return <div>Error: {error}</div>;
+
+  
   return (
     <>
       {/* <!-- slider wrapper start --> */}
@@ -55,7 +75,7 @@ const Slider = () => {
                           </div>
                           <div className="treanding_song_slider">
                             <div className="owl-carousel owl-theme">
-                              {radiosData.slice(0, 10).map((item, index) => (
+                              {radios.map((item, index) => (
                                 <TrendingItem key={index} radio={item} />
                               ))}
                             </div>

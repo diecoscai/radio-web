@@ -4,13 +4,13 @@ import { useRef } from "react";
 import { Navigate } from 'react-router-dom';
 import Preloader from "./components/preLoader/Preloader";
 
-import LenguageModal from "./components/lenguageModal/LenguageModal";
-import LoginModal from "./components/loginModal/LoginModal";
-import RegisterModal from "./components/registerModal/RegisterModal";
+import LenguageModal from "./components/modals/lenguageModal/LenguageModal";
+import LoginModal from "./components/modals/loginModal/LoginModal";
+import RegisterModal from "./components/modals/registerModal/RegisterModal";
 // Assets
-import NotFound from './components/notFound/NotFound';
+import NotFound from './components/pages/notFound/NotFound';
 
-import Home from "./components/home/Home";
+import Home from "./components/pages/home/Home";
 import { RadioProvider } from './context/RadioProvider';
 
 function App() {

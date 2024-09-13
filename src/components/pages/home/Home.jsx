@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
-import Slider from "../slider/Slider";
-import AddBanner from "../addBanner/AddBanner";
-import RadioList from "../radioList/RadioList";
-import RadioGenreList from "../radioGenreList/RadioGenreList";
-import Footer from "../footer/Footer";
-import Header from '../header/Header';
-import Player from '../player/Player';
-import audio from "../../assets/audio.mp3";
+import Slider from "../../sections/slider/Slider";
+import AddBanner from "../../adBanner/AdBanner";
+import RadioList from "../../sections/RadioByCountry/RadioList";
+import RadioGenreList from "../../sections/radioGenreList/RadioGenreList";
+import Footer from "../../sections/footer/Footer";
+import Header from '../../sections/header/Header';
+import Player from '../../sections/player/Player';
 
 function Home({ sectionRefs, scrollToSection }) {
   return (
@@ -27,7 +26,7 @@ function Home({ sectionRefs, scrollToSection }) {
       <div ref={sectionRefs.about} style={{ minHeight: '50vh', background: '#f0f0f0' }}>
         <Footer />
       </div>
-      <Player mediaSource={audio} />
+      <Player />
 
     </>
   );

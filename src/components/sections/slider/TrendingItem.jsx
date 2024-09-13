@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import RadioContext from "../../context/RadioContext";
+import RadioContext from "../../../context/RadioContext";
 
 const TrendingItem = ({ radio }) => {
   const { selectedRadio, setSelectedRadio } = useContext(RadioContext);
