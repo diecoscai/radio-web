@@ -4,25 +4,18 @@ import { getTrendingRadios } from "../../../services/RadioServices";
 
 const Slider = () => {
   const [radios, setRadios] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+
 
   useEffect(() => {
     getTrendingRadios()
       .then(data => {
         setRadios(data);
-        setLoading(false);
       })
       .catch(err => {
-        setError(err.message);
-        setLoading(false);
+        console.log(err);
       });
   }, []);
 
-  if (loading) return <div>Cargando...</div>;
-  if (error) return <div>Error: {error}</div>;
-
-  
   return (
     <>
       {/* <!-- slider wrapper start --> */}

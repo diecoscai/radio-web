@@ -3,12 +3,16 @@ import config from "../config";
 //Get top 10 radios by ranking
 export const getTrendingRadios = async () => {
     try {
-        const response = await fetch(`${config.API_URL}/radio/find?ranking=10`);
+        const response = await fetch(`${config.API_URL}/radio/find?country=usa&ranking=10`);
         if (!response.ok) {
-            throw new Error('Networ response was not ok');
+            throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        return data;
+        if (data.statusCode === 200 && Array.isArray(data.data)) {
+            return data.data;
+        } else {
+            throw new Error('Invalid data structure received from API');
+        }
     } catch (error) {
         console.error("Error fetching top radios: ", error);
         throw error;
