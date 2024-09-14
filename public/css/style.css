@@ -7089,3 +7089,10 @@ span.ovrly_text2 {
 .index4_top_songs_wrapper  .various_artist_text a{
 	color:rgba(255, 255, 255, 0.7) !important;
 }
+
+
+
+#trending-slider {
+	display: flex;
+	flex-direction: row;
+}

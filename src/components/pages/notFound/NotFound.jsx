@@ -29,7 +29,7 @@ const NotFound = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <img src="../../../public/images/error.png" alt="img" className="img-responsive"/>
+                            <img src="/images/error.png" alt="img" className="img-responsive"/>
                                 <div className="error_page_cntnt ms_cover">
                                     <h3>`Sorry, This Page Isn&apos;t available :(`</h3>
                                     <div className="lang_apply_btn home_btn ms_cover">

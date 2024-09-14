@@ -8,7 +8,8 @@ export const getTrendingRadios = async () => {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        if (data.statusCode === 200 && Array.isArray(data.data)) {
+        if (data.statusCode === 200) {
+            console.log("data.data", data.data);
             return data.data;
         } else {
             throw new Error('Invalid data structure received from API');

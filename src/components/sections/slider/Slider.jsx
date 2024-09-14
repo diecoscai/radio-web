@@ -5,16 +5,47 @@ import { getTrendingRadios } from "../../../services/RadioServices";
 const Slider = () => {
   const [radios, setRadios] = useState([]);
 
+  useEffect(() => {
+    const fetchTrendingRadios = async () => {
+      try {
+        const trendingRadios = await getTrendingRadios();
+        setRadios(trendingRadios);
+      } catch (error) {
+        console.error("Error fetching trending radios:", error);
+      }
+    };
+
+    fetchTrendingRadios();
+  }, []);
 
   useEffect(() => {
-    getTrendingRadios()
-      .then(data => {
-        setRadios(data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
+    if (radios.length > 0) {
+        $(".treanding_song_slider .owl-carousel").owlCarousel({
+          loop: true,
+          margin: 15,
+          autoplay: false,
+          smartSpeed: 1200,
+          responsiveClass: true,
+          navText: ['<i class="flaticon-left-arrow"></i>', '<i class="flaticon-right-arrow"></i>'],
+          responsive: {
+            0: {
+              items: 1,
+              nav: true
+            },
+            600: {
+              items: 3,
+              nav: true
+            },
+            1000: {
+              items: 5,
+              nav: true,
+              loop: true,
+              margin: 20
+            }
+          }
+        });
+    }
+  }, [radios]);
 
   return (
     <>
@@ -68,7 +99,7 @@ const Slider = () => {
                           </div>
                           <div className="treanding_song_slider">
                             <div className="owl-carousel owl-theme">
-                              {radios.map((item, index) => (
+                              {radios && radios.map((item,index) => (
                                 <TrendingItem key={index} radio={item} />
                               ))}
                             </div>

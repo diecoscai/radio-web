@@ -37,32 +37,32 @@
         }),
 
         // Treanding wrapper slider
-        $(document).ready(function() {
-            $(".treanding_song_slider .owl-carousel").owlCarousel({
-                loop: !0,
-                margin: 15,
-                autoplay: !1,
-                smartSpeed: 1200,
-                responsiveClass: !0,
-                navText: ['<i class="flaticon-left-arrow"></i>', '<i class="flaticon-right-arrow"></i>'],
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: !0
-                    },
-                    600: {
-                        items: 3,
-                        nav: !0
-                    },
-                    1000: {
-                        items: 5,
-                        nav: !0,
-                        loop: !0,
-                        margin: 20
-                    }
-                }
-            })
-        }),
+        // $(document).ready(function() {
+        //     $(".treanding_song_slider .owl-carousel").owlCarousel({
+        //         loop: !0,
+        //         margin: 15,
+        //         autoplay: !1,
+        //         smartSpeed: 1200,
+        //         responsiveClass: !0,
+        //         navText: ['<i class="flaticon-left-arrow"></i>', '<i class="flaticon-right-arrow"></i>'],
+        //         responsive: {
+        //             0: {
+        //                 items: 1,
+        //                 nav: !0
+        //             },
+        //             600: {
+        //                 items: 3,
+        //                 nav: !0
+        //             },
+        //             1000: {
+        //                 items: 5,
+        //                 nav: !0,
+        //                 loop: !0,
+        //                 margin: 20
+        //             }
+        //         }
+        //     })
+        // }),
 
         // Unknown
         $(document).ready(function() {
