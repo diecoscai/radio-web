@@ -23,7 +23,7 @@ const TrendingItem = ({ radio }) => {
         <div className="ms_treanding_box_overlay">
           <div className="ms_tranding_box_overlay"></div>
           <div className="tranding_play_icon">
-            <a href={radio.stream_url}>
+            <a onClick={handleRadioSelect}>
               <i className="flaticon-play-button"></i>
             </a>
           </div>

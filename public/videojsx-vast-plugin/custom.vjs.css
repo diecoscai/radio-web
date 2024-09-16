@@ -1,0 +1,72 @@
+.vjs-ad-playing.vjs-ad-playing .vjs-progress-control {
+    pointer-events: none;
+}
+
+.vjs-ad-playing.vjs-ad-playing .vjs-play-progress {
+    background-color: #ffe400;
+}
+
+.vjs-ad-playing .vjs-captions-button {
+    display: none;
+}
+
+.vjs-ad-playing .vjs-audio-button {
+    display: none;
+}
+
+.vjs-ad-loading .vjs-loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: vjs-spinner-show 0s linear 0.3s forwards;
+}
+
+.vjs-ad-loading .vjs-loading-spinner:before, .vjs-ad-loading .vjs-loading-spinner:after {
+    animation: vjs-spinner-spin 1.1s cubic-bezier(0.6,  0.2,  0,  0.8) infinite, vjs-spinner-fade 1.1s linear infinite;
+}
+
+.vjs-ad-loading .vjs-loading-spinner:after {
+    animation-delay: 0.44s;
+}
+
+.vjs-ad-loading .vjs-big-play-button, .vjs-ad-loading .vjs-poster, .vjs-ad-content-resuming .vjs-big-play-button, .vjs-ad-content-resuming .vjs-poster {
+    display: none;
+}
+
+.vjs-no-video .vjs-poster {
+    background-size: cover;
+}
+
+.vjs-no-video .vjs-control-bar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.vjs-no-video .vjs-current-time,
+.vjs-no-video .vjs-duration,
+.vjs-no-video .vjs-progress-control,
+.vjs-no-video .vjs-time-divider,
+.vjs-no-video .vjs-fullscreen-control,
+.vjs-no-video .vjs-picture-in-picture-control {
+    display: none;
+}
+
+.vjs-no-video .vjs-poster {
+    display: block;
+    background-size: cover;
+}
+
+.vjs-no-video .vjs-tech {
+    display: none;
+}
+
+.vjs-no-video.vjs-has-poster .vjs-poster {
+    display: block;
+}
+
+.vjs-has-poster .vjs-tech {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}

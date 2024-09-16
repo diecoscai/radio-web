@@ -1,12 +1,6 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import RadioContext from "../../../context/RadioContext";
-
-// mediaSource structure:
-// {
-//    title: "Radio Name",
-//    image: "https://example.com/radio_image.jpg",
-//    mediaUrl: "https://cdn.pixabay.com/audio/2022/03/24/audio_f34ad8292e.mp3",
-// }
+import config from "../../../config";
 
 const Player = () => {
   const audioRef = useRef(null);
@@ -19,10 +13,11 @@ const Player = () => {
   //Set media
   useEffect(() => {
     if (selectedRadio) {
-      const audio = audioRef.current;
-      audio.src = selectedRadio.stream;
-      audio.play().catch(error => console.error("Error playing audio:", error));
+      // const audio = audioRef.current;
+      // audio.src = selectedRadio.stream;
+      // audio.play().catch(error => console.error("Error playing audio:", error));
       setIsPlaying(true);
+      setPlayer(selectedRadio);
     }
   }, [selectedRadio]);
 
@@ -84,6 +79,96 @@ const Player = () => {
     }
   };
 
+  ////////////////////////////////////
+  const setPlayer = (radio) => {
+    const getRadioType = (streamUrl) => {
+      if(String(streamUrl).toLowerCase().includes('.mp3')) return 'audio/mp3';
+      if(String(streamUrl).toLowerCase().includes('.m3u8')) return 'application/x-mpegURL';
+      // if(String(streamUrl).toLowerCase().includes('voscast.com')) return 'aacp';
+      return 'audio/mpeg';
+    }
+
+    console.log('====================================')
+    console.log('url', radio.stream_url);
+    console.log('type', getRadioType(radio.stream_url));
+
+    const player = videojs.getPlayer('audio-player') ? videojs.getPlayer('audio-player') : videojs('audio-player', {
+      controls: true,
+      autoplay: false,
+      preload: 'auto',
+      width: 640,
+      height: 400,
+    });
+
+    player.poster(`${config.API_URL}/images/${radio.img_file}`);
+
+    player.src({
+      src: radio.stream_url,
+      type: getRadioType()
+    });
+
+    // Hide poster on adstart event
+    player.on('adstart', function() {
+      player.removeClass('vjs-no-video');
+      player.removeClass('vjs-has-poster');
+    });
+
+    // Show poster on adend event
+    player.on('adend', function() {
+      player.removeClass('vjs-has-started');
+      player.addClass('vjs-has-poster');
+      player.addClass('vjs-no-video');
+    });
+
+    // Add radio title in vjs-live-display area
+    player.on('ready', function() {
+      // Change play text
+      const bigPlayButton = player.el().querySelector('.vjs-big-play-button');
+
+      if(bigPlayButton) {
+        bigPlayButton.setAttribute('title', 'Play');
+        const controlText = bigPlayButton.querySelector('.vjs-control-text');
+        if(controlText) controlText.textContent = 'Play';
+      }
+
+      // Add radio title
+      const liveDisplay = player.getChild('controlBar').getChild('liveDisplay');
+      if(liveDisplay) liveDisplay.el().innerHTML = `LIVE: ${radio.title}`;
+    });
+
+    // Vast example
+    const url = './vast-example/vast.xml';
+    const schedule = [
+      {
+        url: url,
+        offset: 'pre' // Play before the content (preroll).
+      },
+      // {
+      //     url: url,
+      //     offset: 'post' // Play after the content (postroll).
+      // },
+      {
+        url: url,
+        offset: '30' // Play after the specified number of seconds. For example, 15
+      },
+      // {
+      //     url: url,
+      //     offset: '50%' // Play after xx% of the content. For example, 75%
+      // },
+      // {
+      //     url: url,
+      //     offset: '0:01' // time code: (string) Play at a specific time, in HH:MM:SS or HH:MM format. Examples: 1:30:12 (1 hour, 30 mins, 12 secs), 2:00 (2 hours), 0:25 (25 mins).
+      // },
+    ];
+    const companion = {
+      elementId: 'companion',
+      maxWidth: 300,
+      maxHeight: 250
+    };
+    player.vast({ schedule: schedule, skip: 1, companion: companion });
+    player.play();
+  }
+
   return (
     <div className="adonis-player-wrap">
       <div
@@ -102,13 +187,17 @@ const Player = () => {
                 src={selectedRadio ? selectedRadio.stream : ''}
                 preload="metadata"
               ></audio>
+
+              <video id="audio-player" className="video-js vjs-theme-fantasy vjs-no-video vjs-has-poster hidden">Your browser does not support video.</video>
+              <div id="companion" className="hidden"></div>
+
               <div className="col-sm-4 col-lg-4 col-xl-3 col-4">
                 <div className="media current-item">
                   <div className="song-poster">
                     {selectedRadio && (
                       <img
                         className="box-rounded-sm"
-                        src={selectedRadio.img_url}
+                        src={`${config.API_URL}/images/${selectedRadio.img_file}`}
                         alt={selectedRadio.title}
                       />
                     )}

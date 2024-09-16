@@ -9,7 +9,6 @@ export const getTrendingRadios = async () => {
         }
         const data = await response.json();
         if (data.statusCode === 200) {
-            console.log("data.data", data.data);
             return data.data;
         } else {
             throw new Error('Invalid data structure received from API');
