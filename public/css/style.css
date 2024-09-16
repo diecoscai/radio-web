@@ -1869,6 +1869,7 @@ ul.tranding_more_option li a .opt_icon i:before{
 	float:right;
 	display:inline-block;
 	padding:0 0 0 15px;
+	margin-top: -5px;
 }
 .relaese_viewall_wrapper a{
 	font-weight:600;
@@ -1903,7 +1904,7 @@ ul.tranding_more_option li a .opt_icon i:before{
 	width:100%;
 	padding:20px;
 	position:absolute;
-	bottom:0;
+	bottom:0 !important;
 	background:#fff;
 	-webkit-transition: all 0.3s ease 0s;
    -moz-transition: all 0.3s ease 0s;
