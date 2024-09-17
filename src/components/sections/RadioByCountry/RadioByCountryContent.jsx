@@ -13,7 +13,6 @@ const RadioByCountryContent = ({ country }) => {
           ? await getTrendingRadios()
           : await getRadioByCountry(country);
         setRadios(result);
-        console.log("RADIOS:", result);
       } catch (error) {
         console.error("Error fetching radios:", error);
       }

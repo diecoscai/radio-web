@@ -3756,6 +3756,26 @@ body.off-canvas-overlay-on {
     transform: scale(1.1); /* Aumentar tamaño al pasar el mouse */
 }
 
+.adonis-player-wrap .jp-volume-bar-value::after {
+	content: "";
+	height: 10px;
+	width: 10px;
+	background: #fa5840;
+	display: inline-block;
+	border-radius: 50%;
+	-webkit-box-shadow: 2px 2px 16px 0 rgba(254, 121, 69, 0.2);
+	box-shadow: 2px 2px 16px 0 rgba(254, 121, 69, 0.2);
+	position: absolute;
+	right: -10px;
+	top: 49%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
 .adonis-player-wrap .jp-volume-bar-value::-moz-range-thumb {
     width: 20px;
     height: 20px;
