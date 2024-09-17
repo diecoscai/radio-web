@@ -18,7 +18,7 @@ const RadioListByCountry = () => {
               <h1>Radio Stations by Country</h1>
             </div>
             <div className="relaese_viewall_wrapper">
-              <a className={`nav-link ${country === "null" ? "active" : ""}`}
+              <a className={`nav-link ${country === "all" ? "active" : ""}`}
                     onClick={() => handleCountryChange("null")}>
                 view all <i className="flaticon-right-arrow"></i>
               </a>
