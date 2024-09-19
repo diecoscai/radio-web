@@ -30,7 +30,7 @@ export const getRadioByCountry = async (country) => {
         if (data.statusCode === 200) {
             return data.data;
         } else {
-            throw new Error('Invalid data structure received from API');
+            throw new Error('Invalid data| structure received from API');
         }
     } catch (error) {
         console.error(`Error fetching radio with country ${country}: `, error);
@@ -76,6 +76,43 @@ export const searchRadios = async (params) => {
         return data.data;
     } catch (error) {
         console.error('Error fetching radios:', error);
+        throw error;
+    }
+}
+
+// Get all radio genres
+export const getRadioGenres = async () => {
+    try {
+        const response = await fetch(`${config.API_URL}/radio/genres`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log(data.data.slice(0, 5));
+        return data.data.slice(0, 5);
+    } catch (error) {
+        console.error('Error fetching radio genres:', error);
+        throw error;
+    }
+}
+
+//Get radio by genre
+export const getRadioByGenre = async (genre) => {
+    try {
+        console.log("Genre: ", genre);
+        const response = await fetch(`${config.API_URL}/radio/find?country=usa&genre=${genre}`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        if (data.statusCode === 200) {
+            console.log("Radio by genre: ", data.data);
+            return data.data;
+        } else {
+            throw new Error('Invalid data structure received from API');
+        }
+    } catch (error) {
+        console.error(`Error fetching radio with genre ${genre}: `, error);
         throw error;
     }
 }
