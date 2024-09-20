@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import RadioByGenreContent from "./RadioByGenreContent";
 import { getRadioGenres } from "../../../services/RadioServices";
-const RadioGenreList = () => {
+
+const RadioByGenreList = () => {
 
   const [genres, setGenres] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("all");
@@ -60,4 +61,4 @@ const RadioGenreList = () => {
   );
 }
 
-export default RadioGenreList;
+export default RadioByGenreList;

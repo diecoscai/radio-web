@@ -78,7 +78,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 col-12 col-sm-12">
+            {/* <div className="col-lg-3 col-md-6 col-12 col-sm-12">
               <div className="footer_widget footer_contact_wrapper ms_cover">
                 <h4>download app </h4>
                 <p>All type of app’s available for download</p>
@@ -110,8 +110,8 @@ const Footer = () => {
                   </a>
                 </span>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-12 col-sm-12">
+            </div> */}
+            {/* <div className="col-lg-3 col-md-6 col-12 col-sm-12">
               <div className="footer_widget footer_contact_wrapper ms_cover">
                 <h4>newsletter</h4>
                 <p>Our latest news & Special Offers </p>
@@ -132,7 +132,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

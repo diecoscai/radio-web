@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Slider from "../../sections/slider/Slider";
 import AddBanner from "../../adBanner/AdBanner";
 import RadioByCountryList from "../../sections/RadioByCountry/RadioByCountryList";
-import RadioGenreList from "../../sections/radioGenreList/RadioGenreList";
+import RadioByGenreList from "../../sections/radioGenreList/RadioByGenreList";
 import Footer from "../../sections/footer/Footer";
 import Header from '../../sections/header/Header';
 import Player from '../../sections/player/Player';
@@ -21,7 +21,7 @@ function Home({ sectionRefs, scrollToSection }) {
       </div>
       <AddBanner />
       <div ref={sectionRefs.radioGenreList} style={{ minHeight: '50vh', paddingTop: '50px' }}>
-        <RadioGenreList />
+        <RadioByGenreList />
       </div>
       <div ref={sectionRefs.about} style={{ minHeight: '50vh', background: '#f0f0f0' }}>
         <Footer />

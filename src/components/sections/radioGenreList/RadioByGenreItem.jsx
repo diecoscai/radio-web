@@ -4,7 +4,7 @@ import { getImageUrl } from "../../../utils/imageUtils";
 import RadioContext from "../../../context/RadioContext";
 
 
-const RadioByCategoryItem = ({ radio }) => {
+const RadioByGenreItem = ({ radio }) => {
   const { selectedRadio, setSelectedRadio } = useContext(RadioContext);
 
   const handleRadioSelect = (e) => {
@@ -37,11 +37,11 @@ const RadioByCategoryItem = ({ radio }) => {
   );
 }
 
-RadioByCategoryItem.propTypes = {
+RadioByGenreItem.propTypes = {
   radio: PropTypes.shape({
     img_file: PropTypes.string.isRequired,
     stream_url: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired
   }).isRequired
 };
-export default RadioByCategoryItem;
+export default RadioByGenreItem;
