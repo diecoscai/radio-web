@@ -3,11 +3,6 @@
     "use strict";
 
     var jQuery = $;
-		
-    // Preloader
-    jQuery(window).on("load", function() {
-        jQuery("#status").fadeOut(), jQuery("#preloader").delay(350).fadeOut("slow")
-    });
 
     jQuery(document).ready(function($) {
 
