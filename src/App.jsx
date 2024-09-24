@@ -28,22 +28,20 @@ function App() {
     sectionRefs[section]?.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const [visible, setVisible] = useState(true);
+  const [preloader, setPreloader] = useState(true);
 
   useEffect(() => {
-    // Crear un temporizador para ocultar el componente después de 3 segundos
     const timer = setTimeout(() => {
-      setVisible(false); // Cambiar el estado a false después de 3 segundos
+      setPreloader(false);
     }, 2000);
 
-    // Limpiar el temporizador cuando el componente se desmonte
     return () => clearTimeout(timer);
-  }, []); // El segundo argumento [] asegura que se ejecute solo una vez al montar
+  }, []);
 
   return (
     <RadioProvider>
       <Router>
-        { visible ? <Preloader /> : null }
+        { preloader ? <Preloader /> : null }
         <div className="m24_main_wrapper" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           <Routes>
             <Route path="/404" element={<NotFound />} />
