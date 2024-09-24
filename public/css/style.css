@@ -7112,9 +7112,25 @@ span.ovrly_text2 {
 	color:rgba(255, 255, 255, 0.7) !important;
 }
 
-
-
 #trending-slider {
 	display: flex;
 	flex-direction: row;
+}
+
+.mfp-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#player-popup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.hidden {
+	display: none !important;
 }

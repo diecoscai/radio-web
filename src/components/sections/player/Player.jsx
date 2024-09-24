@@ -1,11 +1,15 @@
-import React, { useRef, useState, useEffect, useContext } from "react";
-import RadioContext from "../../../context/RadioContext";
-import config from "../../../config";
+import React, { useState, useEffect, useContext, useRef } from 'react';
+import RadioContext from '../../../context/RadioContext';
+import config from '../../../config';
+import $ from 'jquery';
+import 'magnific-popup';
 
 const Player = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
     const [currentTime, setCurrentTime] = useState('00:00');
+    const [showAd, setShowAd] = useState(false);
+    const scrollPositionRef = useRef(0);
     const { selectedRadio } = useContext(RadioContext);
 
     // Set media
@@ -110,7 +114,7 @@ const Player = () => {
             // },
             {
                 url: url,
-                offset: '30' // Play after the specified number of seconds. For example, 15
+                offset: '10' // Play after the specified number of seconds. For example, 15
             },
             // {
             //     url: url,
@@ -127,6 +131,39 @@ const Player = () => {
             maxHeight: 250
         };
         player.vast({ schedule: schedule, skip: 1, companion: companion });
+
+        player.on('adstart', () => {
+            // Enable ad visibility
+            setShowAd(true);
+
+            // Disable scroll
+            scrollPositionRef.current = window.scrollY;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `${scrollPositionRef.current}px`;
+            document.body.style.width = '100%';
+
+            // Open popup
+            $.magnificPopup.open({
+                items: { src: '#player-popup' },
+                type: 'inline',
+                enableEscapeKey: false,
+                closeOnBgClick: false
+            });
+        });
+
+        player.on('adend', () => {
+            // Disable ad visibility
+            setShowAd(false);
+
+            // Enable scroll
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollPositionRef.current);
+
+            // Close popup
+            $.magnificPopup.close();
+        });
 
         // Auto-start radio
         if(autostart) {
@@ -180,8 +217,10 @@ const Player = () => {
                 <div className="adonis-player-horizontal">
                     <div className="master-container-fluid">
                         <div className="row adonis-player">
-                            <video id="audio-player" className="video-js vjs-theme-fantasy vjs-no-video vjs-has-poster hidden">Your browser does not support video.</video>
-                            <div id="companion" className="hidden"></div>
+                            <div id="player-popup" className={ showAd ? '' : 'hidden' }>
+                                <video id="audio-player" className="video-js vjs-theme-fantasy vjs-no-video vjs-has-poster">Your browser does not support video.</video>
+                                <div id="companion"></div>
+                            </div>
 
                             <div className="col-sm-4 col-lg-4 col-xl-3 col-4">
                                 <div className="media current-item">

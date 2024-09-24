@@ -76,13 +76,8 @@ const Slider = () => {
                           <div className="lang_apply_btn">
                             <ul>
                               <li data-animation="animated fadeInUp">
-                                <a
-                                  href="https://www.youtube.com/embed/ryzOXAO0Ss0"
-                                  className="gc_main_navigation test-popup-link button"
-                                >
-                                  {" "}
-                                  <i className="flaticon-play-button"></i>play
-                                  vast
+                                <a style={{color: '#ffffff'}} className="gc_main_navigation test-popup-link button">
+                                  <i className="flaticon-play-button"></i>start now
                                 </a>
                               </li>
                             </ul>
