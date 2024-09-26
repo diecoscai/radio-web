@@ -14,6 +14,9 @@ importers:
       jquery:
         specifier: 3.3.1
         version: 3.3.1
+      magnific-popup:
+        specifier: ^1.2.0
+        version: 1.2.0
       prop-types:
         specifier: ^15.8.1
         version: 15.8.1
@@ -23,6 +26,9 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-multi-carousel:
+        specifier: ^2.8.5
+        version: 2.8.5
       react-router-dom:
         specifier: ^6.26.1
         version: 6.26.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1031,6 +1037,10 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  magnific-popup@1.2.0:
+    resolution: {integrity: sha512-vkRTVPhQwUgmndX1086k4kMorkzf1XIjBhyL4eIiV8SAjUJQuAdgQEFtMEwbHRFhHOfXe+vcEkRKYLjRAFzMwg==}
+    engines: {node: '>= 0.8.0'}
+
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -1135,6 +1145,10 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-multi-carousel@2.8.5:
+    resolution: {integrity: sha512-C5DAvJkfzR2JK9YixZ3oyF9x6R4LW6nzTpIXrl9Oujxi4uqP9SzVVCjl+JLM3tSdqdjAx/oWZK3dTVBSR73Q+w==}
+    engines: {node: '>=8'}
 
   react-refresh@0.14.2:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
@@ -2545,6 +2559,8 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
+  magnific-popup@1.2.0: {}
+
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
@@ -2645,6 +2661,8 @@ snapshots:
       scheduler: 0.23.2
 
   react-is@16.13.1: {}
+
+  react-multi-carousel@2.8.5: {}
 
   react-refresh@0.14.2: {}
 

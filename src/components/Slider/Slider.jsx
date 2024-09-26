@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import TrendingItem from "./TrendingItem";
-import { getTrendingRadios } from "../../../services/RadioServices";
+import { getTrendingRadios } from "../../services/RadioServices";
 
 const Slider = () => {
   const [radios, setRadios] = useState([]);
-
+  
   useEffect(() => {
     const fetchTrendingRadios = async () => {
       try {

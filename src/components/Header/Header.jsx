@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 const Header = ({ scrollToSection }) => {
   return (
     <>
@@ -82,15 +82,30 @@ const Header = ({ scrollToSection }) => {
 
                 <div id="search_open" className="res_search_box">
                   <div className="lang_list_wrapper responsive_search_toggle">
-                    <a href="#">browse</a>
+                    <a
+                      className="gc_main_navigation improved-class"
+                      onClick={() => scrollToSection("radioList")}
+                    >
+                      Trending
+                    </a>
                   </div>
 
                   <div className="lang_list_wrapper responsive_search_toggle">
-                    <a href="#">radio</a>
+                    <a
+                      className="gc_main_navigation improved-class"
+                      onClick={() => scrollToSection("radioGenreList")}
+                    >
+                      Genres
+                    </a>
                   </div>
 
                   <div className="lang_list_wrapper responsive_search_toggle">
-                    <a href="#">more</a>
+                    <a
+                      className="gc_main_navigation improved-class"
+                      onClick={() => scrollToSection("about")}
+                    >
+                      About
+                    </a>
                   </div>
 
                   <div className="lang_list_wrapper responsive_search_toggle">
@@ -111,12 +126,13 @@ const Header = ({ scrollToSection }) => {
               </div>
             </div>
             <div className="m24_navi_langauage_box">
-              <div className="theme-switch-wrapper">
+              {/* <div className="theme-switch-wrapper">
                 <label className="theme-switch" htmlFor="checkbox">
                   <input type="checkbox" id="checkbox" />
                   <span className="slider round"></span>
                 </label>
-              </div>
+              </div> */}
+              <ThemeSwitch />
               <div className="lang_list_wrapper d-none d-sm-none d-md-none d-lg-none d-xl-block">
                 <a href="#" data-toggle="modal" data-target="#myModal">
                   languages <i className="fas fa-language"></i>

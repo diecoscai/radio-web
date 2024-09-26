@@ -1,21 +1,22 @@
-import React, { useContext } from "react";
+import { useContext, useCallback } from "react";
 import PropTypes from "prop-types";
-import RadioContext from "../../../context/RadioContext";
-import config from "../../../config";
+import RadioContext from "../../context/RadioContext";
+import config from "../../config";
 
-const TrendingItem = ({ radio }) => {
+const CarouselItem = ({ radio }) => {
   const { selectedRadio, setSelectedRadio } = useContext(RadioContext);
 
-  const handleRadioSelect = (e) => {
+  const handleRadioSelect = useCallback((e) => {
     e.preventDefault();
     setSelectedRadio(radio);
-  };
+  }, [radio, setSelectedRadio]);
 
   const isSelected = selectedRadio && selectedRadio.title === radio.title;
 
   const getImageUrl = (filename) => {
     return `${config.API_URL}/images/${filename}`;
   };
+
   return (
     <div className="item">
       <div className="treanding_slider_main_box ms_cover">
@@ -34,12 +35,12 @@ const TrendingItem = ({ radio }) => {
   );
 };
 
-TrendingItem.propTypes = {
+CarouselItem.propTypes = {
   radio: PropTypes.shape({
-      img_file: PropTypes.string.isRequired,
-      stream_url: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired
+    img_file: PropTypes.string.isRequired,
+    stream_url: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
   }).isRequired
 };
 
-export default TrendingItem;
+export default CarouselItem;

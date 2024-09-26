@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
-import RadioContext from '../../../context/RadioContext';
-import config from '../../../config';
+import RadioContext from '../../context/RadioContext';
+import config from '../../config';
 import $ from 'jquery';
 import 'magnific-popup';
 

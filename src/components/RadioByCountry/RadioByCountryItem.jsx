@@ -1,10 +1,10 @@
 import React, {useContext} from "react";
 import PropTypes from "prop-types";
-import { getImageUrl } from "../../../utils/imageUtils";
-import RadioContext from "../../../context/RadioContext";
+import { getImageUrl } from "../../utils/imageUtils";
+import RadioContext from "../../context/RadioContext";
 
 
-const RadioByGenreItem = ({ radio }) => {
+const RadioByCountryItem = ({ radio }) => {
   const { selectedRadio, setSelectedRadio } = useContext(RadioContext);
 
   const handleRadioSelect = (e) => {
@@ -16,7 +16,7 @@ const RadioByGenreItem = ({ radio }) => {
 
   return (
     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 pd1">
-      <div className="treanding_slider_main_box release_box_main_content ms_cover">
+      <div className="treanding_slider_main_box release_box_main_content ms_cover radio-card">
         <img src={getImageUrl(radio.img_file)} alt="img" />
         <div className="release_content_artist" >
           <p>
@@ -37,11 +37,11 @@ const RadioByGenreItem = ({ radio }) => {
   );
 }
 
-RadioByGenreItem.propTypes = {
+RadioByCountryItem.propTypes = {
   radio: PropTypes.shape({
     img_file: PropTypes.string.isRequired,
     stream_url: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired
   }).isRequired
 };
-export default RadioByGenreItem;
+export default RadioByCountryItem;

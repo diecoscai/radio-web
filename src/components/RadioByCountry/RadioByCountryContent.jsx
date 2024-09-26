@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import RadioByCountryItem from "./RadioByCountryItem";
 import PropTypes from "prop-types";
-import { getRadioByCountry, getTrendingRadios } from "../../../services/RadioServices";
-
+import { getRadioByCountry, getTrendingRadios } from "../../services/RadioServices";
+import useWindowWidth from "../../utils/useWindowWidth";
+import RadioByCountryCarousel from "./RadioByCountryCarousel";
 const RadioByCountryContent = ({ country }) => {
   const [radios, setRadios] = useState([]);
+  const windowWidth = useWindowWidth();
 
   useEffect(() => {
     const fetchRadios = async () => {
@@ -21,14 +23,23 @@ const RadioByCountryContent = ({ country }) => {
     fetchRadios();
   }, [country]);
 
+  
+  const renderRadiosComponent = () => {
+    if (windowWidth <= 1024) {
+      console.log("radiosASD: ", radios);
+      return <RadioByCountryCarousel radios={radios.slice(0, 12)} />
+    }else{
+      return radios.slice(0, 12).map((item, index) => (
+        <RadioByCountryItem key={index} radio={item} />
+      ));
+    }
+  }
 
   return (
     <div className="tab-content">
       <div id="home" className="tab-pane active">
         <div className="row">
-          {radios && radios.slice(0, 12).map((item, index) => (
-            <RadioByCountryItem key={index} radio={item} />
-          ))}
+          {renderRadiosComponent()}
         </div>
       </div>
     </div>

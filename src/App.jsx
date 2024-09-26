@@ -8,15 +8,16 @@ import LenguageModal from "./components/modals/lenguageModal/LenguageModal";
 import LoginModal from "./components/modals/loginModal/LoginModal";
 import RegisterModal from "./components/modals/registerModal/RegisterModal";
 // Assets
-import NotFound from './components/pages/notFound/NotFound';
+import NotFound from './pages/NotFound/NotFound';
 
-import Home from "./components/pages/home/Home";
+import Home from "./pages/Home/Home";
 import { RadioProvider } from './context/RadioProvider';
 
 function App() {
   const radioListRef = useRef(null);
   const radioGenreListRef = useRef(null);
   const aboutRef = useRef(null);
+  const [preloader, setPreloader] = useState(true);
 
   const sectionRefs = {
     radioList: radioListRef,
@@ -28,7 +29,6 @@ function App() {
     sectionRefs[section]?.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const [preloader, setPreloader] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {

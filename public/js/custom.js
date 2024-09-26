@@ -25,7 +25,7 @@
         }
 
         // Mobile version menu
-        (jQuery), $("#search_button").on("click", function(e) {
+        $("#search_button").on("click", function(e) {
             $("#search_open").slideToggle(), e.stopPropagation()
         }), $(document).on("click", function(e) {
             e.target.closest("#search_open") || $("#search_open").slideUp()
@@ -104,15 +104,5 @@
                 e.preventDefault(), adonisObj.toggleOffCanvas(t(this).attr("data-target"))
             })
         });
-
-        // Theme switch
-        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]'),
-        currentTheme = localStorage.getItem("theme");
-
-        function switchTheme(e) {
-            e.target.checked ? (document.documentElement.setAttribute("data-theme", "dark"), localStorage.setItem("theme", "dark")) : (document.documentElement.setAttribute("data-theme", "light"), localStorage.setItem("theme", "light"))
-        }
-
-        currentTheme && (document.documentElement.setAttribute("data-theme", currentTheme), "dark" === currentTheme && (toggleSwitch.checked = !0)), toggleSwitch.addEventListener("change", switchTheme, !1);
     });
 }(jQuery);
