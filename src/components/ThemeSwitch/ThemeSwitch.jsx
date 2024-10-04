@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
               {/* <div className="theme-switch-wrapper">
                 <label className="theme-switch" htmlFor="checkbox">

@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import Slider from "../../components/slider/Slider";
-import AddBanner from "../../components/adBanner/AdBanner";
-import RadioByCountryList from "../../components/radioByCountry/RadioByCountryList";
-import RadioByGenreList from "../../components/radioGenreList/RadioByGenreList";
-import Footer from "../../components/footer/Footer";
-import Header from '../../components/header/Header';
-import Player from '../../components/player/Player';
+import Slider from "../../components/Slider/Slider";
+import AddBanner from "../../components/AddBanner/AddBanner";
+import RadioByCountryList from "../../components/RadioByCountry/RadioByCountryList";
+import RadioByGenreList from "../../components/RadioGenreList/RadioByGenreList";
+import Footer from "../../components/Footer/Footer";
+import Header from '../../components/Header/Header';
+import Player from '../../components/Player/Player';
 
 function Home({ sectionRefs, scrollToSection }) {
   return (
