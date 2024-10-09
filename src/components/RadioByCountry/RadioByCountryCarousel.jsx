@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css'; // Import carousel styles
 import CarouselItem from '../RadioGenreList/CarouselItem';
+
 
 const RadioByCountryCarousel = ({ radios }) => {
 

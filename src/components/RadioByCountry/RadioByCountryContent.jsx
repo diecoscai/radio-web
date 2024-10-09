@@ -26,7 +26,6 @@ const RadioByCountryContent = ({ country }) => {
   
   const renderRadiosComponent = () => {
     if (windowWidth <= 1024) {
-      console.log("radiosASD: ", radios);
       return <RadioByCountryCarousel radios={radios.slice(0, 12)} />
     }else{
       return radios.slice(0, 12).map((item, index) => (

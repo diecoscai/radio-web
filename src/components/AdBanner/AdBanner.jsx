@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddBanner = () => {
+const AdBanner = () => {
   return (
     <>
       <div
@@ -27,4 +27,4 @@ const AddBanner = () => {
   );
 };
 
-export default AddBanner;
+export default AdBanner;

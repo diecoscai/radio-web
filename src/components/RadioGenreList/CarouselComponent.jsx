@@ -47,7 +47,7 @@ const CarouselComponent = ({ genre }) => {
   return (
     <div
       data-animation="animated fadeInUp"
-      className="slider_treanding_stop ms_cover"
+      className="slider_treanding_stop ms_cover carousel_genres"
     >
       <div className="slider_trending_heading">
         <h1>{genre}</h1>

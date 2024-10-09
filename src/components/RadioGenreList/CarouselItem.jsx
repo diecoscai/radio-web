@@ -18,8 +18,8 @@ const CarouselItem = ({ radio }) => {
   };
 
   return (
-    <div className="item">
-      <div className="treanding_slider_main_box ms_cover">
+    <div className="item ">
+      <div className="treanding_slider_main_box">
         <img src={getImageUrl(radio.img_file)} alt="img" />
         <div className="ms_treanding_box_overlay">
           <div className="ms_tranding_box_overlay"></div>

@@ -236,7 +236,7 @@
     .release_box_main_content img {
         width: 100%
     }
-    .release_box_main_content:hover .release_content_artist {
+    .release_box_main_content:hover .country_item_title {
         bottom: 150px
     }
     .top_songs_list_left {
@@ -298,7 +298,7 @@
         width: 100%;
         height: 210px
     }
-    .free_music_wrapper .top_lis_left_content .release_content_artist {
+    .free_music_wrapper .top_lis_left_content .country_item_title {
         padding-left: 6px
     }
     .free_music_wrapper .top_list_tract_view a {
@@ -459,7 +459,7 @@
     .release_box_main_content p a {
         padding-right: 0
     }
-    .release_box_main_content:hover .release_content_artist {
+    .release_box_main_content:hover .country_item_title {
         bottom: 180px
     }
     .swiper-button-next {
@@ -861,7 +861,7 @@
     .release_tabs_wrapper .nav-tabs .nav-link {
         padding: 10px 8px
     }
-    .release_box_main_content:hover .release_content_artist {
+    .release_box_main_content:hover .country_item_title {
         bottom: 340px
     }
     .swiper-container-horizontal>.swiper-pagination-bullets,
@@ -956,7 +956,7 @@
         left: -133px;
         right: auto
     }
-    .release_box_main_content:hover .release_content_artist {
+    .release_box_main_content:hover .country_item_title {
         bottom: 280px
     }
     .swiper-pagination-current {
@@ -1017,7 +1017,7 @@
     .favourit_album_list .album_list_wrapper {
         width: 200%
     }
-    .free_music_wrapper .top_lis_left_content .release_content_artist {
+    .free_music_wrapper .top_lis_left_content .country_item_title {
         padding-left: 6px
     }
     .upcoming_event_wrapper h3 {
@@ -1111,7 +1111,7 @@
         right: auto;
         width: 250px
     }
-    .release_box_main_content:hover .release_content_artist {
+    .release_box_main_content:hover .country_item_title {
         bottom: 245px
     }
     .top_list_tract_view p {
@@ -1210,7 +1210,7 @@
     .free_music_wrapper .top_songs_list_right {
         width: 20%
     }
-    .free_music_wrapper .top_lis_left_content .release_content_artist {
+    .free_music_wrapper .top_lis_left_content .country_item_title {
         padding-left: 15px
     }
 	.album_list_wrapper2{
@@ -1221,7 +1221,7 @@
     .relaese_viewall_wrapper {
         display: none
     }
-    .release_box_main_content:hover .release_content_artist {
+    .release_box_main_content:hover .country_item_title {
         bottom: 220px
     }
     .top_list_tract_time {

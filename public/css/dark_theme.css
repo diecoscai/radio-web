@@ -112,7 +112,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /**--- Background and Text Colors ---**/
 .adonis-player-wrap .adonis-playlist,
-.album_list_wrapper .release_content_artist,
+.album_list_wrapper .country_item_title,
 .blog_pagination_section ul li a,
 .comment_heading_bottom .crm_message_dropbox_wrapper .nice-select .option.selected.focus,
 .contect_form_footer input,
@@ -187,7 +187,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .slider-area .carousel-inner .carousel-item .carousel-captions .content h2,
 .smalltext,
 .sv_blog_text h5 a,
-.top_lis_left_content .release_content_artist p a,
+.top_lis_left_content .country_item_title p a,
 .top_list_tract_view p,
 .top_song_artist_playlist .ms_tranding_more_icon i,
 .top_song_list_picks .ms_tranding_more_icon i:before,
@@ -283,7 +283,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .prs_ec_ue_right_img_wrapper,
 .prs_feature_img_cont,
 .quick_link_wrapper,
-.release_content_artist,
+.country_item_title,
 .sidebar_widget,
 .slider_side_width:after,
 .stations_wrapper .various_song_playlist,
