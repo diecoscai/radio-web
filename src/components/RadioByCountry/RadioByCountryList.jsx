@@ -19,7 +19,7 @@ const RadioListByCountry = () => {
             </div>
             <div className="relaese_viewall_wrapper">
               <a className={`nav-link ${country === "all" ? "active" : ""}`}
-                    onClick={() => handleCountryChange("null")}
+                    onClick={() => handleCountryChange("all")}
                     style={{ cursor: "pointer" }}>
                 view all <i className="flaticon-right-arrow"></i>
               </a>

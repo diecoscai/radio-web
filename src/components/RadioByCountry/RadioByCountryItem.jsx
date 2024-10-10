@@ -18,22 +18,19 @@ const RadioByCountryItem = ({ radio }) => {
     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 pd1 country_container">
       <div className="treanding_slider_main_box release_box_main_content ms_cover country_item">
         <img src={getImageUrl(radio.img_file)} alt="img" />
-        <div className="release_content_artist country_item_title" >
-          <p>
-            <a>{radio.title}</a>
-          </p>
+        <div className="release_content_artist country_item_title">
+          <p><a href="#">{radio.title}</a></p>
         </div>
-        <div className="release_box_overlay">
+        <div className="ms_treanding_box_overlay release_box_overlay">
           <div className="ms_tranding_box_overlay"></div>
           <div className="tranding_play_icon">
-          <a onClick={handleRadioSelect}>
+            <a href="#" onClick={handleRadioSelect}>
               <i className="flaticon-play-button"></i>
             </a>
           </div>
         </div>
       </div>
     </div>
-
   );
 }
 

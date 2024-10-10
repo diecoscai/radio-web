@@ -1,10 +1,11 @@
 import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
     return(
         <div className="footer_wrapper ms_cover">
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="col-lg-3 col-md-6 col-12 col-sm-12">
               <div className="footer_widget footer_about_wrapper ms_cover">
                 <div className="wrapper_first_image">

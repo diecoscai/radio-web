@@ -897,9 +897,9 @@
         float: none;
         font-size: 16px
     }
-    .slider_treanding_stop {
+    /* .slider_treanding_stop {
         display: none
-    }
+    } */
     .index2_slider_wrapper .carousel-inner .carousel-indicators {
         bottom: 65px
     }

@@ -1,0 +1,41 @@
+.footer_content {
+    text-align: center;
+  }
+  
+  .footer_contact_list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer_links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer_links li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+.footer_wrapper .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer_wrapper .row {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
+
+@media (max-width: 768px) {
+  .footer_wrapper .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.footer_wrapper {
+  padding-bottom: 40px;
+}
