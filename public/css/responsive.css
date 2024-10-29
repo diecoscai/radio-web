@@ -904,7 +904,8 @@
         bottom: 65px
     }
     .index2_slider_wrapper .carousel-inner .carousel-item .carousel-captions .content {
-        padding-bottom: 100px
+        padding-bottom: 100px;
+        padding-top: 100px;
     }
     .slider2_about_img {
         margin-bottom: 30px

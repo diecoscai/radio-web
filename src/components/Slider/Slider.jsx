@@ -29,7 +29,7 @@ const Slider = () => {
           navText: ['<i class="flaticon-left-arrow"></i>', '<i class="flaticon-right-arrow"></i>'],
           responsive: {
             0: {
-              items: 1,
+              items: 2,
               nav: true
             },
             600: {

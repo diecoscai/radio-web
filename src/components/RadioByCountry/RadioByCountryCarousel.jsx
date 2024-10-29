@@ -24,7 +24,7 @@ const RadioByCountryCarousel = ({ radios }) => {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 2,
       slidesToSlide: 1,
     },
   };
@@ -37,7 +37,7 @@ const RadioByCountryCarousel = ({ radios }) => {
       <Carousel
         responsive={responsive}
         ssr={true}
-        infinite={true}
+        infinite={false}
         autoPlay={false}
         keyBoardControl={true}
         customTransition="all 0.5s ease-in-out"

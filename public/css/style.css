@@ -1931,7 +1931,7 @@ ul.tranding_more_option li a .opt_icon i:before{
 	text-transform:capitalize!important;
 }
 .release_box_overlay .tranding_play_icon{
-	top:40%;
+	top:50%;
 }
 .release_box_overlay .tranding_play_icon a i:before{
 	font-size:50px;
@@ -7160,4 +7160,7 @@ span.ovrly_text2 {
   
  
 
-  
+  .react-multiple-carousel__arrow {
+	z-index: 999 !important;
+}
+
