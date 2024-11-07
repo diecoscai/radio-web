@@ -283,7 +283,7 @@ a:hover {
 	border: none;
 	color: #FB6042;
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	cursor: pointer;
 	text-decoration: none;
 	padding: 10px 15px;
@@ -846,7 +846,7 @@ a:hover {
 .navi_searchbar_wrapper {
     position: relative;
 	float:left;
-	width:49%;
+	width:40%;
 	margin-left:30px;
 	padding-top:11px;
 }
@@ -1307,10 +1307,11 @@ span.comboTreeItemTitle{
 .main_slider_wrapper{
 	float:left;
 	width:100%;
-	background:#fff;
+	background: var(--bg-gradient);
 	height:100%;
 	position:relative;
 	overflow:hidden;
+	transition: all 0.3s ease;
 }
 .slider-area .carousel-inner .carousel-item .caption-1, .slider-area .carousel-inner .carousel-item .caption-2, .slider-area .carousel-inner .carousel-item .caption-3 {
   width:100%;
@@ -1324,7 +1325,8 @@ span.comboTreeItemTitle{
   z-index: 999;
   overflow: hidden;
   vertical-align: middle;
-  padding:100px 0;
+  padding: 80px 0;
+  animation: fadeIn 0.5s ease-in;
 }
 .slider-area .carousel-inner .carousel-item .carousel-captions .content ul{
 	display:inline-block;
@@ -1399,11 +1401,13 @@ span.comboTreeItemTitle{
 	display:none;
 }
 .slider-area .carousel-inner .carousel-item .carousel-captions .content h1{
-	font-size:60px;
-	text-transform:uppercase;
-	color:#909090;
-	margin-bottom:18px;
-	animation-delay: 1.3s;
+	font-size:72px;
+	font-weight:700;
+	margin-bottom:10px;
+	background: linear-gradient(90deg, #FF4B2B 0%, #FF416C 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: slideInLeft 0.8s ease-out;
 }
 .slider_right_wrapper{
 	 float: left;
@@ -4802,6 +4806,7 @@ body.off-canvas-overlay-on {
     -moz-box-shadow: 0 4px 15px 0px rgba(248, 71, 62, 0.05);
     -webkit-box-shadow: 0 4px 15px 0px rgba(248, 71, 62, 0.05);
     box-shadow: 0 4px 15px 0px rgba(248, 71, 62, 0.05);
+	border-radius:10px;
 }
 .blog_category_box_wrapper:hover .blog_heaidng_top h3 a{
 	 color: #fa5b41; 

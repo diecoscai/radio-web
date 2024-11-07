@@ -14,12 +14,14 @@ import Home from "./pages/Home/Home";
 import { RadioProvider } from './context/RadioProvider';
 
 function App() {
+  const homeRef = useRef(null);
   const radioListRef = useRef(null);
   const radioGenreListRef = useRef(null);
   const aboutRef = useRef(null);
   const [preloader, setPreloader] = useState(true);
 
   const sectionRefs = {
+    home: homeRef,
     radioList: radioListRef,
     radioGenreList: radioGenreListRef,
     about: aboutRef,

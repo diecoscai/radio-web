@@ -12,7 +12,7 @@ function Home({ sectionRefs, scrollToSection }) {
     <>
       <Header scrollToSection={scrollToSection} />
 
-      <div style={{ minHeight: '100vh', paddingTop: '50px' }}>
+      <div ref={sectionRefs.home} style={{ minHeight: '100vh', paddingTop: '50px' }}>
         <Slider />
       </div>
       <AdBanner />

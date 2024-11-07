@@ -10,7 +10,10 @@ const Header = ({ scrollToSection }) => {
           {/* <!-- logo --> */}
           <div className="m24_logo_wrapper">
             <div className="ms_logo_div">
-              <a href="index.html">
+              <a
+                onClick={() => scrollToSection("home")}
+                style={{ cursor: 'pointer' }}
+              >
                 <img src="images/logo.png" alt="logo" />
               </a>
             </div>
@@ -38,7 +41,7 @@ const Header = ({ scrollToSection }) => {
                     className="gc_main_navigation improved-class"
                     onClick={() => scrollToSection("radioList")}
                   >
-                    Trending
+                    Country
                   </a>
                 </li>
 
@@ -47,7 +50,7 @@ const Header = ({ scrollToSection }) => {
                     className="gc_main_navigation improved-class"
                     onClick={() => scrollToSection("radioGenreList")}
                   >
-                    Genres
+                    Genre
                   </a>
                 </li>
 
@@ -86,7 +89,7 @@ const Header = ({ scrollToSection }) => {
                       className="gc_main_navigation improved-class"
                       onClick={() => scrollToSection("radioList")}
                     >
-                      Trending
+                      Country
                     </a>
                   </div>
 
@@ -95,7 +98,7 @@ const Header = ({ scrollToSection }) => {
                       className="gc_main_navigation improved-class"
                       onClick={() => scrollToSection("radioGenreList")}
                     >
-                      Genres
+                      Genre
                     </a>
                   </div>
 

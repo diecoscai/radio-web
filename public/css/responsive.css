@@ -8,7 +8,7 @@
         margin-left: 0
     }
     .m24_navi_langauage_box {
-        width: 24%
+        width: 20%
     }
 }
 @media (max-width:1650px) {
@@ -620,7 +620,7 @@
         width: auto;
         padding-right: 0
     }
-    ..res_search_box {
+    .res_search_box {
         margin-top: 12px
     }
 }
@@ -1260,4 +1260,19 @@
     .m24_logo_wrapper {
         width: 67%
     }
+}
+
+
+.main_slider_wrapper h1,h2{
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.main_slider_wrapper{
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.1)
+      );
 }

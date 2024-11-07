@@ -6,27 +6,37 @@
 
 /**--- Variables CSS ---**/
 :root {
-    --box-color: #fff;
-    --font-color: #191919;
-    --bg-color: #f9f9f9;
-    --heading-color: #191919;
-    --para-color: #707070;
-    --default-color: #191919;
-    --hover-color: #fa5b41;
-    --side-color: #fff;
-    --border-color: #e6e6e6;
+    --primary-color: #FF4B2B;
+    --secondary-color: #2B3240;
+    --accent-color: #6C63FF;
+    
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --bg-tertiary: #E9ECEF;
+    
+    --box-color: var(--bg-primary);
+    --font-color: var(--secondary-color);
+    --bg-color: var(--bg-secondary);
+    --heading-color: var(--secondary-color);
+    --hover-color: var(--primary-color);
+    --border-color: var(--bg-tertiary);
 }
 
 [data-theme=dark] {
-    --box-color: #0f0e37;
-    --font-color: #fff;
-    --bg-color: #04031d;
-    --heading-color: #fff;
-    --para-color: rgba(255, 255, 255, 0.55);
+    --primary-color: #FF4B2B;
+    --secondary-color: #F8F9FA;
+    --accent-color: #6C63FF;
+    
+    --bg-primary: #0f0e37;
+    --bg-secondary: #04031d;
+    --bg-tertiary: #080729;
+    
+    --box-color: var(--bg-primary);
+    --font-color: var(--secondary-color);
+    --bg-color: var(--bg-secondary);
+    --heading-color: var(--secondary-color);
+    --hover-color: var(--primary-color);
     --border-color: rgba(255, 255, 255, 0.3);
-    --default-color: #191919;
-    --hover-color: #fa5b41;
-    --side-color: #080729;
 }
 
 /**--- Base Styles ---**/
@@ -303,4 +313,28 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     .notify_para {
         color: var(--font-color);
     }
+}
+
+/* Slider theme styles */
+.slider-area {
+  background-color: var(--box-color);
+}
+
+.slider-area .carousel-inner .carousel-item .carousel-captions .content h1,
+.slider-area .carousel-inner .carousel-item .carousel-captions .content h2,
+.slider-area .carousel-inner .carousel-item .carousel-captions .content p,
+.slider-area .slider_trending_heading h1 {
+  color: var(--font-color);
+}
+
+/* Update button styles to maintain contrast */
+.slider-area .gc_main_navigation.test-popup-link {
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  transition: all 0.3s ease;
+}
+
+.slider-area .gc_main_navigation.test-popup-link:hover {
+  background-color: var(--font-color);
+  color: var(--box-color);
 }

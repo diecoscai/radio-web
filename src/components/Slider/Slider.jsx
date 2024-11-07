@@ -50,7 +50,7 @@ const Slider = () => {
   return (
     <>
       {/* <!-- slider wrapper start --> */}
-      <div className="main_slider_wrapper index2_slider_wrapper slider-area bg-dark">
+      <div className="main_slider_wrapper index2_slider_wrapper slider-area">
         <div
           id="carousel-example-generic"
           className="carousel slide"
