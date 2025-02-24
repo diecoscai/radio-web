@@ -1,0 +1,312 @@
+{
+    "statusCode": 200,
+    "message": "Success",
+    "data": [
+        {
+            "id": 1157,
+            "title": "Cadena 100 - FM 99.5 - Madrid",
+            "img_file": "EGNlggnd.webp",
+            "stream_url": "https://cadena100-cope.flumotion.com/playlist.m3u8",
+            "country": "ESP",
+            "locations": [
+                "españa",
+                "madrid",
+                "madrid"
+            ],
+            "genres": [
+                "pop",
+                "rock",
+                "dance",
+                "romantica"
+            ],
+            "description": "null",
+            "ranking": 8,
+            "url": "http://cadena100.es/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 1,
+            "title": "Celeste Corazón - Online - Elizabeth",
+            "img_file": "owe02Cuq.webp",
+            "stream_url": "https://streamingraddios.online/proxy/celeste?mp=/stream",
+            "country": "USA",
+            "locations": [
+                "estados unidos",
+                "new jersey",
+                "elizabeth"
+            ],
+            "genres": [
+                "latina",
+                "folklore",
+                "pop",
+                "rock",
+                "rock nacional",
+                "tango"
+            ],
+            "description": "La radio Uruguaya con corazón celeste, Desde Octubre de 2007 llevandote la mejor música rioplatense, en todos los generos, Folklore, Canto Popular, Tango, Candombe, Murgas, Musica Tropical, Pop, Pop latino ,Top 40, Old Hits 60s, 70s, 80s, 90s, Dance, Rock Nacional, Baladas, Un estilo musical para cada momento del día.",
+            "ranking": 1,
+            "url": "http://celestecorazonradio.com/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 1777,
+            "title": "Fm Aspen - FM 102.3 - Buenos Aires",
+            "img_file": "NdRboD7Q.webp",
+            "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/ASPEN.mp3",
+            "country": "ARG",
+            "locations": [
+                "argentina",
+                "buenos aires",
+                "buenos aires"
+            ],
+            "genres": [
+                "retro",
+                "pop",
+                "rock",
+                "dance"
+            ],
+            "description": "Una radio, todos los clásicos.",
+            "ranking": 10,
+            "url": "http://fmaspen.com/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 1772,
+            "title": "FM Metro 95.1 - FM 95.1 - Buenos Aires",
+            "img_file": "iP81BWTY.webp",
+            "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/METROAAC.aac?dist=Raddios",
+            "country": "ARG",
+            "locations": [
+                "argentina",
+                "buenos aires",
+                "buenos aires"
+            ],
+            "genres": [
+                "entretenimiento",
+                "informativa",
+                "pop",
+                "rock",
+                "dance"
+            ],
+            "description": "Metro 95.1 es una estación de radio argentina que transmite desde la Ciudad Autónoma de Buenos Aires. Es considerada -junto a Rock & Pop, La 100, Aspen 102.3, Radio Uno, Nacional Folklórica, FM Milenium y Blue 100.7- una emisora clave en la historia de la radio argentina, dentro de las que aún permanecen vigentes.",
+            "ranking": 5,
+            "url": "http://metro951.com/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 4235,
+            "title": "FMDOS - FM 98.5 - Providencia",
+            "img_file": "143ArWEJ.webp",
+            "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/FMDOS_SC",
+            "country": "CHL",
+            "locations": [
+                "chile",
+                "region metropolitana",
+                "providencia"
+            ],
+            "genres": [
+                "hits",
+                "retro",
+                "pop",
+                "rock",
+                "romantica"
+            ],
+            "description": "null",
+            "ranking": 1,
+            "url": "http://fmdos.cl/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 4879,
+            "title": "Gazeta - FM 99.9 - Cuiaba",
+            "img_file": "vKz4Zk6a.webp",
+            "stream_url": "http://wz4.dnip.com.br:13155/",
+            "country": "BRA",
+            "locations": [
+                "brasil",
+                "sao paulo",
+                "cuiaba"
+            ],
+            "genres": [
+                "pop",
+                "rock",
+                "dance",
+                "reggae"
+            ],
+            "description": "Operando hoje com 20 quilowatts de potência (??nica em MT com essa potência) e com os equipamentos mais modernos do mercado, a Gazeta FM 99,9 surgiu em 1990, e proporciona aos ouvintes a melhor qualidade em músicas e comerciais, oferecendo um excelente retorno aos anunciantes.",
+            "ranking": 7,
+            "url": "http://fm.gazetadigital.com.br/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 1768,
+            "title": "La 100 - FM 99.9 - Buenos Aires",
+            "img_file": "plW7PK8P.webp",
+            "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/FM999_56.mp3?dist=la100_webplayer",
+            "country": "ARG",
+            "locations": [
+                "argentina",
+                "buenos aires",
+                "buenos aires"
+            ],
+            "genres": [
+                "entretenimiento",
+                "informativa",
+                "retro",
+                "pop",
+                "rock",
+                "dance",
+                "romantica"
+            ],
+            "description": "La 100, FM 99.9 de Buenos Aires y sus repetidoras en todo el país, es la radio N°1 de la Argentina, todos los días te brinda información de actualidad y todas las noticias que tenes que saber durante el día.",
+            "ranking": 1,
+            "url": "http://la100.com.ar/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 1770,
+            "title": "Los 40 Argentina - FM 105.5 - Buenos Aires",
+            "img_file": "W1SPs9BM.webp",
+            "stream_url": "https://frontend.radiohdvivo.com/los40/live",
+            "country": "ARG",
+            "locations": [
+                "argentina",
+                "buenos aires",
+                "buenos aires"
+            ],
+            "genres": [
+                "entretenimiento",
+                "hits",
+                "pop",
+                "rock",
+                "reggaeton"
+            ],
+            "description": "40 Principales, FM 105.5. Marca tendencia",
+            "ranking": 3,
+            "url": "http://los40.com.ar/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 4236,
+            "title": "Los 40 Chile - FM 101.7 - Santiago",
+            "img_file": "ZAFHVLgb.webp",
+            "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CHILEAAC.aac",
+            "country": "CHL",
+            "locations": [
+                "chile",
+                "region metropolitana",
+                "santiago"
+            ],
+            "genres": [
+                "pop",
+                "rock",
+                "reggaeton",
+                "romantica"
+            ],
+            "description": "null",
+            "ranking": 2,
+            "url": "http://los40.cl/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 4881,
+            "title": "Radio 97 - FM 97.7 - Foz do Iguaçu",
+            "img_file": "IChMlQgf.webp",
+            "stream_url": "https://audiostreaming1.septecloud.com.br/radio/8030/radio.mp3",
+            "country": "BRA",
+            "locations": [
+                "brasil",
+                "parana",
+                "foz do iguaçu"
+            ],
+            "genres": [
+                "hits",
+                "pop",
+                "rock"
+            ],
+            "description": "A 97 FM é líder em audiência em Foz do Iguaçu e região, com mais de 1 milhão de ouvintes das mais variadas idades, etnias e classes sociais*.",
+            "ranking": 9,
+            "url": "http://radio97.fm.br/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 1774,
+            "title": "Radio Disney Argentina - FM 94.3 - Buenos Aires",
+            "img_file": "6GBeBikT.webp",
+            "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_ARG_BA.mp3?dist=raddios.com",
+            "country": "ARG",
+            "locations": [
+                "argentina",
+                "buenos aires",
+                "buenos aires"
+            ],
+            "genres": [
+                "entretenimiento",
+                "pop",
+                "rock",
+                "dance",
+                "reggaeton",
+                "romantica"
+            ],
+            "description": "Radio Disney es una emisora radial de la cadena de Radio Disney Latinoamérica que trasmite en Argentina desde la primera semana de Abril del 2001 en la 94.3 de frecuencia modulada, es una radio musical de éxitos en español e inglés trasmitida durante las 24 horas del día con un elenco de locutores. La programación está dirigida al público joven.",
+            "ranking": 7,
+            "url": "http://disneylatino.com/radio/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 6,
+            "title": "Radio Fly - FM 92.3 - Albany",
+            "img_file": "v1ddyPUt.webp",
+            "stream_url": "https://ais-sa1.streamon.fm/7817_128k.aac",
+            "country": "USA",
+            "locations": [
+                "estados unidos",
+                "california",
+                "albany"
+            ],
+            "genres": [
+                "pop",
+                "rock",
+                "dance"
+            ],
+            "description": "Listen Live! Albanys #1 Hit Music Station!",
+            "ranking": 6,
+            "url": "http://fly92.com/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        },
+        {
+            "id": 1776,
+            "title": "Rock & Pop - FM 95.9 - Buenos Aires",
+            "img_file": "BCxmU7F1.webp",
+            "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOPAAC.aac",
+            "country": "ARG",
+            "locations": [
+                "argentina",
+                "buenos aires",
+                "buenos aires"
+            ],
+            "genres": [
+                "entretenimiento",
+                "pop",
+                "rock"
+            ],
+            "description": "Todo lo que tenés que saber del rock está en un solo lugar. Fmrockandpop.com te informa de todo lo que pasa en el mundo del rock. Hay muchas formas de hablar de rock, nosotros conocemos la mejor.",
+            "ranking": 9,
+            "url": "http://fmrockandpop.com/",
+            "createdAt": "2024-09-19T15:09:33.000Z",
+            "updatedAt": "2024-09-19T15:09:33.000Z"
+        }
+    ]
+}
