@@ -621,7 +621,8 @@
         padding-right: 0
     }
     .res_search_box {
-        margin-top: 12px
+        margin-top: 0;
+        top: 100%;
     }
 }
 @media (max-width:850px) {
@@ -818,9 +819,10 @@
     }
     .search_bar {
         position: absolute;
-        right: 16px;
-        top: -31px;
-        padding: 0
+        right: 0;
+        top: -38px;
+        padding: 0;
+        z-index: 1001;
     }
     .navi_searchbar_wrapper {
         padding-top: 15px

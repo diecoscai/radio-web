@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 const Header = ({ scrollToSection }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLinkClick = (e, section) => {
+    e.preventDefault();
+    scrollToSection(section);
+    setIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const closeMenu = (e) => {
+      if (!e.target.closest('.search_bar')) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', closeMenu);
+    return () => document.removeEventListener('click', closeMenu);
+  }, []);
+
   return (
     <>
       {/* <!-- top navi wrapper end --> */}
@@ -79,15 +104,19 @@ const Header = ({ scrollToSection }) => {
             {/* <!-- mobile version menu --> */}
             <div className="d-block d-sm-block d-md-block d-lg-block d-xl-none">
               <div className="search_bar">
-                <div className="res_search_bar" id="search_button">
+                <div 
+                  className="res_search_bar" 
+                  onClick={handleMenuClick}
+                >
                   <i className="fa fa-ellipsis-v"></i>
                 </div>
 
-                <div id="search_open" className="res_search_box">
+                <div className={`res_search_box ${isMenuOpen ? 'active' : ''}`}>
                   <div className="lang_list_wrapper responsive_search_toggle">
                     <a
+                      href="#"
                       className="gc_main_navigation improved-class"
-                      onClick={() => scrollToSection("radioList")}
+                      onClick={(e) => handleLinkClick(e, "radioList")}
                     >
                       Country
                     </a>
@@ -95,8 +124,9 @@ const Header = ({ scrollToSection }) => {
 
                   <div className="lang_list_wrapper responsive_search_toggle">
                     <a
+                      href="#"
                       className="gc_main_navigation improved-class"
-                      onClick={() => scrollToSection("radioGenreList")}
+                      onClick={(e) => handleLinkClick(e, "radioGenreList")}
                     >
                       Genre
                     </a>
@@ -104,14 +134,15 @@ const Header = ({ scrollToSection }) => {
 
                   <div className="lang_list_wrapper responsive_search_toggle">
                     <a
+                      href="#"
                       className="gc_main_navigation improved-class"
-                      onClick={() => scrollToSection("about")}
+                      onClick={(e) => handleLinkClick(e, "about")}
                     >
                       About
                     </a>
                   </div>
 
-                  <div className="lang_list_wrapper responsive_search_toggle">
+                  {/* <div className="lang_list_wrapper responsive_search_toggle">
                     <a href="#" data-toggle="modal" data-target="#myModal">
                       languages <i className="fas fa-language"></i>
                     </a>
@@ -124,7 +155,7 @@ const Header = ({ scrollToSection }) => {
                         <p>login/register</p>
                       </div>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

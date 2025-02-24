@@ -16,7 +16,7 @@ function Home({ sectionRefs, scrollToSection }) {
         <Slider />
       </div>
       <AdBanner />
-      <div ref={sectionRefs.radioList} style={{ minHeight: '100vh', paddingTop: '50px' }}>
+      <div ref={sectionRefs.radioList} style={{ minHeight: '50vh', paddingTop: '50px' }}>
         <RadioByCountryList />
       </div>
       <AdBanner />
